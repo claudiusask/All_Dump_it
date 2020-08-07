@@ -1,0 +1,42 @@
+# I have a setup of custome bridge network on my windows docker
+# -v=19.03.12, build 48a66213fe. The name of my custom bridge was "default_net"
+#
+# This is the way to use that custom network to be used by this
+# docker-compose file. It was quiet difficult to find the proper syntax to
+# use with docker-compose YAML files. USE AT YOUR OWN RISK.
+
+version: "3.4"
+
+services:
+  drupal:
+    image: drupal:8.8.2
+    # --- use your custome bridge network here below---
+    networks:
+      - default_net
+    ports:
+      - "8080:80"
+    volumes:
+      - drupal-modules:/var/www/html/modules
+      - drupal-profiles:/var/www/html/profiles
+      - drupal-sites:/var/www/html/sites
+      - drupal-themes:/var/www/html/themes
+  postgres:
+    image: postgres:12.1
+    # --- Also use here the name of custom bridge network
+    networks:
+      - default_net
+    environment:
+      - POSTGRES_PASSWORD=example
+    volumes:
+      - "drupal-postgres:/var/lib/postgresql/data"
+# --- map here -- (not above in the services) -- see the line 36! (below networks)
+# it is the same custom network.
+networks:
+  default_net:
+    external: true
+volumes:
+  drupal-postgres:
+  drupal-modules:
+  drupal-profiles:
+  drupal-sites:
+  drupal-themes:
