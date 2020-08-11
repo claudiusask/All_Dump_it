@@ -1,4 +1,4 @@
-How to keep YouTube to left extreme left while following the code.
+How to keep YouTube to extreme left while following the code.
 
 I had this issue where the screen real-estate we not properly used for students. Whenever I am following a code tutorial the left margin of the 
 playing-window is leaving a lot of margin. So what I did is added and extension Stylebot from chrome extension store and added a custom CSS.
