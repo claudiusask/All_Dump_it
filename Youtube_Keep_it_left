@@ -4,6 +4,11 @@ I had this issue where the screen real-estate was not properly used for students
 playing-window is leaving a lot of margin. So what I did is added an extension Stylebot from chrome extension store and added a custom CSS.
 
 So what you have to do is go to options in this extension and add a new style sheet. Enter the URL (for me it was https://www.youtube.com) and I 
-added a class of <code>.style-scope {margin-left: 0px;}</code>. That’s it now enjoy at least an extra inch of real-estate and follow along the code tutorials 
+added a class of .style-scope {margin-left: 0px;}. That’s it now enjoy at least an extra inch of real-estate and follow along the code tutorials 
 with come more VS-Code - sublimeText – or any other IDE screen estate.
- 
+
+```
+.style-scope {
+ margin-left:0px
+ }
+```
