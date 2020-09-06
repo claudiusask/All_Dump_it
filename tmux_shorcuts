@@ -1,0 +1,31 @@
+These are the shortcuts for TMUX I found after hours of search:
+
+1) New Window
+    ctrl + a <release> c;
+
+2) New Horizontal window in same screen
+    ctrl + a <release> Shift + %
+
+3) New Vertical window
+    ctrl + a <release> Shift + "
+
+2-A, 3-A) Move between panes
+            ctrl + a <release> arrow ( any one of these ----> Up, Down, Left, Right)
+
+4) View and move between Sessions
+    ctrl + a <release> w
+
+5) Rename Windows
+    ctrl + a <release> ,
+
+6) Rename Sessions
+    tmux new -s 
+
+7) Kill all servers
+    tmux kill-servers
+
+8) Dettach from a session but keep it running in background
+    ctrl + a <release> d
+    
+9) Re-attach to a session which is already running in background
+    tmux attach-session -t <name of session>
