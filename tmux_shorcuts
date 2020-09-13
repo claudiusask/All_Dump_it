@@ -18,14 +18,31 @@ These are the shortcuts for TMUX I found after hours of search:
 5) Rename Windows
     ctrl + a <release> ,
 
-6) Rename Sessions
-    tmux new -s 
+6) Named Sessions
+    tmux new -s <name of session>
 
 7) Kill all servers
     tmux kill-servers
 
 8) Dettach from a session but keep it running in background
     ctrl + a <release> d
-    
+
 9) Re-attach to a session which is already running in background
     tmux attach-session -t <name of session>
+
+10) Scrolling and copy and paste
+    to copy paste we have to be in scrolling mode
+        Scroll Mode:
+            ctrl + a <release the key> [
+            ESC key to get out of this mode
+        copy:
+            ctrl + space-bar to select or highlight <move cursor after releasing this keycombination>
+            Alt + w to copy it to clipboard
+        paste:
+            in TMUX:
+                ctrl + a <release the key> ]
+            in other programs or apps:
+                ctrl + v <to anywhere you want to paste, try it on notepad.exe>
+        Search in Scroll Mode:
+            ctrl + r <at the bottom type the text you are looking for>
+                use n key for next in search or shift+n
